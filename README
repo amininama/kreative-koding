@@ -1,0 +1,21 @@
+everything is inside sketches directory for now
+I don't think we needed to init a node project here
+
+in order to create a new sketch:
+npx canvas-sketch sketch-01.js --new
+This will generate a new js file and start serving over a certain local port
+
+in order to continue working on a sketch:
+npx canvas-sketch sketch-01.js
+
+saving the animation:
+1- make sure to have ffmpeg in the same dependency set of canvas-sketch
+npm install @ffmpeg-installer/ffmpeg
+2- run the canvas-sketch:
+npm canvas-sketch sketch-01.js --output=tmp --stream=mp4 
+3- Ctrl+Shft+S to start capturing
+4- Ctrl+Shft+S to stop capturing
+5- look for the file in tmp folder under the sketches directory
+
+canvas-sketch docs:
+https://github.com/mattdesl/canvas-sketch
